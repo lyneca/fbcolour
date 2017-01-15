@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="global.css" type="text/css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <article>
+      <heading>Messenger Colour Changer</heading><br />
+      Get 16.7 million colour options in your Facebook chat<br />
+      (as opposed to only 15)
+      <div class=main>
+        <span class=subtitle>Log in with Facebook</span>
+        <form method="post" action="/">
+          <input autocomplete=off placeholder=email class=hvr-border-fade type=text name=email />
+          <input autocomplete=off placeholder=password class=hvr-border-fade type=password name=password />
+          <br />
+          <div class="hvr-border-fade colorcontainer">
+            <label for="textinput" class=hash style="cursor:text;">#</label>
+            <input autocomplete=off placeholder=000000 class="color" maxlength=6 type=text name=color />
+          </div>
+          <br />
+          <input autocomplete=off placeholder="thread id" class=hvr-border-fade type=text name=thread />
+          <br />
+          <input type=submit class="submit" value="DO IT" />
+        </form>
+        <script>
+          $(".color").on('input', function(e) {
+            if ($('.color').val().length != 6 && $('.color').val().length != 3) {
+              $('.hash').css("color", "#dddddd");
+            } else {
+              $('.hash').css("color", '#' + $('.color').val());
+            }
+          });
+        </script>
+      </div>
+      <div id=description>
+        For group chats:<br />
+          grab the thread ID from the URL:
+          messenger.com/t/<span class=highlight>1234567890123456</span><br /><br />
+        For one on one chats:<br />
+          grab the person's fbid using <a href=http://findfacebookid.com/>this excellent site</a>.
+      </div>
+      <div id=footer>
+        Think I'm trying to steal your Facebook password? <span class=highlight>Good!</span><br />
+        If not, you need to get more paranoid.<br />
+        You can look at the <a href="https://github.com/lyneca/fbcolour">site source code</a> to inspect it (or download and host it locally)<br />
+        or you can use <a href=https://github.com/lyneca/fbcolour-offline>my offline tool</a>.
+      </div>
+    </article>
+  </body>
+</html>

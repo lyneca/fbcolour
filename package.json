@@ -1,0 +1,24 @@
+{
+  "name": "fbcolour",
+  "version": "1.0.0",
+  "description": "A website to change Messenger Chat Colours",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lyneca/fbcolour.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lyneca/fbcolour/issues"
+  },
+  "homepage": "https://github.com/lyneca/fbcolour#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "facebook-chat-api": "^1.2.0"
+  }
+}
