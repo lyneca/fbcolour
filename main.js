@@ -19,7 +19,7 @@ app.post('/', function(req, res) {
     api.changeThreadColor(color, thread, function callback(err) {
       if (err) return console.error(err);
       api.logout()
-      res.sendFile("public/index.html", {__dirname});
+      res.sendFile("public/index.html", {root: __dirname});
     })
   })
 });
