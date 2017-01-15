@@ -3,13 +3,6 @@ var bodyParser = require('body-parser')
 var app = express();
 var login = require('facebook-chat-api')
 
-// const http = require('http');
-// var finalhandler = require('finalhandler')
-// const qs = require('querystring');
-// var static = require('serve-static');
-//
-// var serve = new static('.', {'': ['index.html'], '/doit': ['index.html']})
-
 const hostname = 'localhost';
 const port = 80;
 
